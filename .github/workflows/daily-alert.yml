@@ -1,0 +1,41 @@
+name: Daily Job Alert
+
+on:
+  schedule:
+    - cron: "0 6 * * 1-5"   # Mo–Fr um 7:00 Uhr MEZ (6:00 UTC)
+  workflow_dispatch:          # Manuell auslösbar zum Testen
+
+# Erlaubt dem Workflow, Dateien ins Repo zu committen
+permissions:
+  contents: write
+
+jobs:
+  run-job-hunter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Job Hunter
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python main.py
+
+      - name: Commit & Push results
+        run: |
+          git config user.name  "Job Hunter Bot"
+          git config user.email "bot@job-hunter"
+          git add docs/jobs.json
+          git diff --staged --quiet || git commit -m "Daily job update $(date +'%Y-%m-%d')"
+          git push

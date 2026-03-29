@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Hunter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+    :root {
+      --bg:        #0f0f11;
+      --surface:   #18181c;
+      --border:    #2a2a32;
+      --text:      #e8e8f0;
+      --muted:     #6b6b80;
+      --accent:    #7c6af7;
+      --accent-dim:#3d3570;
+      --green:     #34d399;
+      --green-dim: #0d3326;
+      --red:       #f87171;
+      --red-dim:   #3b1414;
+      --yellow:    #fbbf24;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 0 0 60px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* ── Stats bar ── */
+    .stats {
+      display: flex;
+      gap: 24px;
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Filter bar ── */
+    .filters {
+      padding: 16px 32px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: all .15s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .search-box {
+      margin-left: auto;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      width: 220px;
+      outline: none;
+    }
+
+    .search-box:focus {
+      border-color: var(--accent);
+    }
+
+    /* ── Job list ── */
+    .job-list {
+      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 900px;
+    }
+
+    .job-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      transition: border-color .15s;
+      animation: fadeIn .25s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .job-card:hover { border-color: var(--accent); }
+
+    .job-card.liked    { border-left: 3px solid var(--green); }
+    .job-card.disliked { border-left: 3px solid var(--red); opacity: .5; }
+
+    .job-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .job-title a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .job-title a:hover { color: var(--accent); }
+
+    .job-meta {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .job-meta span::before {
+      margin-right: 4px;
+    }
+
+    .job-reason {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .job-reason::before {
+      content: '🤖 ';
+    }
+
+    /* Score badge */
+    .score-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .score-badge {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600;
+      font-size: 16px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .score-high  { background: var(--green-dim); color: var(--green); }
+    .score-mid   { background: #2d2810; color: var(--yellow); }
+    .score-low   { background: var(--red-dim);   color: var(--red); }
+
+    /* Feedback buttons */
+    .feedback-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .fb-btn {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .15s;
+    }
+
+    .fb-btn:hover { transform: scale(1.15); }
+    .fb-btn.yes   { background: var(--green-dim); border-color: var(--green); }
+    .fb-btn.no    { background: var(--red-dim);   border-color: var(--red); }
+
+    /* Platform tag */
+    .platform-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .date-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 80px 32px;
+      color: var(--muted);
+    }
+
+    .empty-icon { font-size: 48px; margin-bottom: 16px; }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all .2s;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Section header */
+    .section-header {
+      padding: 8px 32px 4px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header, .stats, .filters, .job-list, .section-header {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .search-box { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🎯</div>
+    Job Hunter
+  </div>
+  <div class="meta" id="last-updated">Lädt...</div>
+</header>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-value" id="stat-total">–</div>
+    <div class="stat-label">Jobs gesamt</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value" id="stat-new" style="color:var(--accent)">–</div>
+    <div class="stat-label">Heute neu</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value" id="stat-liked" style="color:var(--green)">–</div>
+    <div class="stat-label">Liked</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value" id="stat-feedback">–</div>
+    <div class="stat-label">Bewertet</div>
+  </div>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="setFilter('all', this)">Alle</button>
+  <button class="filter-btn" onclick="setFilter('new', this)">Heute neu</button>
+  <button class="filter-btn" onclick="setFilter('high', this)">Score ≥ 7</button>
+  <button class="filter-btn" onclick="setFilter('liked', this)">👍 Liked</button>
+  <button class="filter-btn" onclick="setFilter('unseen', this)">Unbewertet</button>
+  <input class="search-box" type="text" id="search" placeholder="Suchen..." oninput="renderJobs()">
+</div>
+
+<div class="section-header" id="section-label"></div>
+<div class="job-list" id="job-list"></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let allJobs    = [];
+  let feedback   = {};
+  let activeFilter = 'all';
+  const today    = new Date().toISOString().split('T')[0];
+
+  // ── Daten laden ──────────────────────────────────────────────────────────────
+  async function init() {
+    // Jobs laden
+    try {
+      const r = await fetch('jobs.json?t=' + Date.now());
+      const d = await r.json();
+      allJobs = d.jobs || [];
+      document.getElementById('last-updated').textContent =
+        'Zuletzt aktualisiert: ' + (d.last_updated || 'unbekannt');
+      document.getElementById('stat-new').textContent = d.new_today ?? '–';
+    } catch(e) {
+      document.getElementById('last-updated').textContent = 'jobs.json nicht gefunden';
+    }
+
+    // Feedback aus localStorage
+    try {
+      feedback = JSON.parse(localStorage.getItem('job_feedback') || '{}');
+    } catch(e) { feedback = {}; }
+
+    updateStats();
+    renderJobs();
+  }
+
+  // ── Stats ────────────────────────────────────────────────────────────────────
+  function updateStats() {
+    const liked    = Object.values(feedback).filter(f => f.liked).length;
+    const total    = Object.keys(feedback).length;
+    document.getElementById('stat-total').textContent    = allJobs.length;
+    document.getElementById('stat-liked').textContent    = liked;
+    document.getElementById('stat-feedback').textContent = total;
+  }
+
+  // ── Filter ───────────────────────────────────────────────────────────────────
+  function setFilter(name, btn) {
+    activeFilter = name;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderJobs();
+  }
+
+  function applyFilter(jobs) {
+    const q = document.getElementById('search').value.toLowerCase();
+    return jobs.filter(job => {
+      const matchSearch = !q ||
+        job.title.toLowerCase().includes(q) ||
+        job.company.toLowerCase().includes(q) ||
+        (job.location || '').toLowerCase().includes(q);
+
+      if (!matchSearch) return false;
+
+      const fb = feedback[job.id];
+      if (activeFilter === 'new')    return job.found_date === today;
+      if (activeFilter === 'high')   return job.score >= 7;
+      if (activeFilter === 'liked')  return fb && fb.liked;
+      if (activeFilter === 'unseen') return !fb;
+      return true;
+    });
+  }
+
+  // ── Render ───────────────────────────────────────────────────────────────────
+  function renderJobs() {
+    const filtered = applyFilter(allJobs);
+    const list     = document.getElementById('job-list');
+    const label    = document.getElementById('section-label');
+
+    label.textContent = `${filtered.length} Stelle${filtered.length !== 1 ? 'n' : ''}`;
+
+    if (!filtered.length) {
+      list.innerHTML = `
+        <div class="empty">
+          <div class="empty-icon">🔍</div>
+          <div>Keine Stellen gefunden</div>
+          <div style="font-size:13px;margin-top:8px;color:var(--muted)">
+            Passe den Filter an oder warte auf das nächste Update.
+          </div>
+        </div>`;
+      return;
+    }
+
+    list.innerHTML = filtered.map(job => {
+      const fb          = feedback[job.id];
+      const scoreClass  = job.score >= 7 ? 'score-high' : job.score >= 5 ? 'score-mid' : 'score-low';
+      const cardClass   = fb ? (fb.liked ? 'liked' : 'disliked') : '';
+      const isNew       = job.found_date === today;
+
+      return `
+        <div class="job-card ${cardClass}" id="card-${job.id}">
+          <div>
+            <div class="job-title">
+              <a href="${job.url}" target="_blank" rel="noopener">${job.title}</a>
+              ${isNew ? '<span style="font-size:11px;color:var(--accent);margin-left:8px;font-weight:500">NEU</span>' : ''}
+            </div>
+            <div class="job-meta">
+              <span>🏢 ${job.company}</span>
+              <span>📍 ${job.location || 'k.A.'}</span>
+              <span class="platform-tag">${job.platform}</span>
+              <span class="date-tag">${job.found_date || ''}</span>
+            </div>
+            ${job.reason ? `<div class="job-reason">${job.reason}</div>` : ''}
+          </div>
+          <div class="score-col">
+            <div class="score-badge ${scoreClass}">${job.score}</div>
+            <div class="feedback-btns">
+              <button class="fb-btn ${fb && fb.liked ? 'yes' : ''}"
+                      onclick="saveFeedback('${job.id}', '${job.title.replace(/'/g,'')}', '${job.company.replace(/'/g,'')}', true)"
+                      title="Interessant">👍</button>
+              <button class="fb-btn ${fb && !fb.liked ? 'no' : ''}"
+                      onclick="saveFeedback('${job.id}', '${job.title.replace(/'/g,'')}', '${job.company.replace(/'/g,'')}', false)"
+                      title="Nicht relevant">👎</button>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ── Feedback speichern ───────────────────────────────────────────────────────
+  function saveFeedback(jobId, title, company, liked) {
+    feedback[jobId] = { liked, title, company, date: today };
+    localStorage.setItem('job_feedback', JSON.stringify(feedback));
+
+    // Card sofort updaten
+    const card = document.getElementById('card-' + jobId);
+    if (card) {
+      card.classList.remove('liked', 'disliked');
+      card.classList.add(liked ? 'liked' : 'disliked');
+      card.querySelectorAll('.fb-btn').forEach(b => {
+        b.classList.remove('yes', 'no');
+      });
+      const btns = card.querySelectorAll('.fb-btn');
+      if (btns[0]) btns[0].classList.toggle('yes', liked);
+      if (btns[1]) btns[1].classList.toggle('no', !liked);
+    }
+
+    updateStats();
+    showToast(liked ? '👍 Als interessant markiert' : '👎 Als nicht relevant markiert');
+  }
+
+  // ── Toast ────────────────────────────────────────────────────────────────────
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  init();
+</script>
+</body>
+</html>
