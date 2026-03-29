@@ -1,5 +1,174 @@
 {
-  "jobs": [],
-  "last_updated": "noch nie – warte auf den ersten Run",
-  "new_today": 0
+  "jobs": [
+    {
+      "platform": "LinkedIn",
+      "title": "Project Lawyer (m/w/d)",
+      "company": "YPOG",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/project-lawyer-m-w-d-at-ypog-4392098450",
+      "description": "",
+      "id": "1f78b7b1a80c2105",
+      "score": 9,
+      "reason": "Juristische Projektarbeit bei renommierter Kanzlei mit exzellenten Karrierechancen",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Senior Projektingenieur:in Bahntechnische Ausrüstung Siemensbahn und Nahverkehrstangente Nord",
+      "company": "Deutsche Bahn",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-projektingenieur-in-bahntechnische-ausr%C3%BCstung-siemensbahn-und-nahverkehrstangente-nord-at-deutsche-bahn-4365636651",
+      "description": "",
+      "id": "0ab268bf999d7678",
+      "score": 9,
+      "reason": "Hochspezialisierte Senior-Ingenieursstelle bei der Deutschen Bahn mit Prestigeprojekten",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Senior Cloud Security Engineer",
+      "company": "N26 Group",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-cloud-security-engineer-at-n26-4311881366",
+      "description": "",
+      "id": "3567c2fb57a76d7e",
+      "score": 9,
+      "reason": "Senior-Rolle im gefragten IT-Security Bereich bei innovativem Fintech-Unternehmen",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Senior Prozess-/ Projekt-Ingenieur Pharma Marburg (m/w/d)",
+      "company": "PPT Pharma Process Technology Group",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-prozess-projekt-ingenieur-pharma-marburg-m-w-d-at-ppt-pharma-process-technology-group-4349581120",
+      "description": "",
+      "id": "5dc08d05e0b13212",
+      "score": 8,
+      "reason": "Senior-Position in der pharmazeutischen Industrie mit hohem Entwicklungspotential",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Projektingenieur:in konstruktiver Ingenieurbau",
+      "company": "Deutsche Bahn",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/projektingenieur-in-konstruktiver-ingenieurbau-at-deutsche-bahn-4175771119",
+      "description": "",
+      "id": "e9639fead9d23dac",
+      "score": 8,
+      "reason": "Deutsche Bahn bietet sichere Anstellung und interessante Infrastrukturprojekte",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Projektingenieur Projektsteuerung / Projektmanagement öffentliche Bauprojekte (w/m/d)",
+      "company": "Arcadis",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/projektingenieur-projektsteuerung-projektmanagement-%C3%B6ffentliche-bauprojekte-w-m-d-at-arcadis-4381201667",
+      "description": "",
+      "id": "e908247c397dd7c0",
+      "score": 8,
+      "reason": "Projektmanagement im öffentlichen Sektor mit stabilen Zukunftsaussichten",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "(Senior) Cloud Migration Consultant (m/w/d)",
+      "company": "Deloitte",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-cloud-migration-consultant-m-w-d-at-deloitte-4337642152",
+      "description": "",
+      "id": "8835eb03e876bbba",
+      "score": 8,
+      "reason": "Zukunftsorientierte Cloud-Beratung bei Big4-Unternehmen mit starken Wachstumschancen",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Bauingenieur / Architekt (w/m/d) Objektüberwachung",
+      "company": "Drees & Sommer",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/bauingenieur-architekt-w-m-d-objekt%C3%BCberwachung-at-drees-sommer-4259883668",
+      "description": "",
+      "id": "85628e344343e1e6",
+      "score": 7,
+      "reason": "Solide Ingenieursstelle mit guten Perspektiven im Bauwesen",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Area Operations Partner Ost (m/w/d) - remote im Raum Berlin",
+      "company": "AniCura",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/area-operations-partner-ost-m-w-d-remote-im-raum-berlin-at-anicura-4380268921",
+      "description": "",
+      "id": "43c9f40f2391e669",
+      "score": 6,
+      "reason": "Remote-Option ist attraktiv, aber Operations-Rolle im Tierarztbereich sehr nischig",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "MFA / Medizinische Fachangestellte (m/w/d) - Innere Medizin / Gastroenterologie",
+      "company": "Helios Kliniken GmbH",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/mfa-medizinische-fachangestellte-m-w-d-innere-medizin-gastroenterologie-at-helios-kliniken-gmbh-4390790869",
+      "description": "",
+      "id": "f3233b532c91dc7d",
+      "score": 6,
+      "reason": "Stabile medizinische Position, aber eher ausführende Tätigkeit",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "BER\nSenior Social Media Manager:in",
+      "company": "Zum goldenen Hirschen",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/ber%0Asenior-social-media-manager-in-at-zum-goldenen-hirschen-4393746339",
+      "description": "",
+      "id": "99b410f401259439",
+      "score": 6,
+      "reason": "Senior-Position im Marketing, aber bei kleinerer Firma mit unklaren Perspektiven",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Project Management Leader",
+      "company": "Cognite",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/project-management-leader-at-cognite-4365483527",
+      "description": "",
+      "id": "0b7037f6b541b2db",
+      "score": 5,
+      "reason": "Projektmanagement-Position ohne spezifische Beschreibung, daher schwer bewertbar",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Assistent/in der Theaterleitung",
+      "company": "Neptuned GmbH",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/assistent-in-der-theaterleitung-at-neptuned-gmbh-4394156920",
+      "description": "",
+      "id": "54995b55e1ccd0b2",
+      "score": 4,
+      "reason": "Sehr spezifische Theaterbranche mit begrenzten Karrieremöglichkeiten",
+      "found_date": "2026-03-29"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Hairstylist:in",
+      "company": "By Adriana Haarverlängerung und Keratin",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/hairstylist-in-at-by-adriana-haarverl%C3%A4ngerung-und-keratin-4393788858",
+      "description": "",
+      "id": "3e8aa41749c0224f",
+      "score": 3,
+      "reason": "Handwerkliche Dienstleistung mit begrenzten Aufstiegsmöglichkeiten",
+      "found_date": "2026-03-29"
+    }
+  ],
+  "last_updated": "2026-03-29 13:21 UTC",
+  "new_today": 14
 }
