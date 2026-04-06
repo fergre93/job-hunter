@@ -2,6 +2,114 @@
   "jobs": [
     {
       "platform": "LinkedIn",
+      "title": "Projektingenieur:in Konstruktiver Ingenieurbau im Großprojekt S21 Berlin für den 3. Bauabschnit",
+      "company": "Deutsche Bahn",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/projektingenieur-in-konstruktiver-ingenieurbau-im-gro%C3%9Fprojekt-s21-berlin-f%C3%BCr-den-3-bauabschnit-at-deutsche-bahn-4295618053",
+      "description": "",
+      "id": "f21478799fdb3b98",
+      "score": 8,
+      "reason": "Projektingenieur-Position bei Großprojekt S21 mit konstruktivem Ingenieurbau-Fokus",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "SAP Projektleiter S4/HANA (m/f/d)",
+      "company": "Halian | Managed Services, Recruitment Agency & Contract Staffing",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/sap-projektleiter-s4-hana-m-f-d-at-halian-managed-services-recruitment-agency-contract-staffing-4387124212",
+      "description": "",
+      "id": "4758f81d325f90aa",
+      "score": 7,
+      "reason": "Spezialisierte SAP-Projektleitung mit klarem Technologiefokus auf S4/HANA",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Bauleiter (w/m/d) EPCM Industry ‒ Bauausführung im Bereich Kraftwerks- und Prozesstechnik",
+      "company": "Drees & Sommer",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/bauleiter-w-m-d-epcm-industry-%E2%80%92-bauausf%C3%BChrung-im-bereich-kraftwerks-und-prozesstechnik-at-drees-sommer-4397899536",
+      "description": "",
+      "id": "d122ad645270b8d2",
+      "score": 7,
+      "reason": "Bauleitung im technischen Umfeld mit Fokus auf Kraftwerks- und Prozesstechnik",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "HVDC Lead Planning Engineer  (m/w/d)",
+      "company": "GE Vernova",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/hvdc-lead-planning-engineer-m-w-d-at-ge-vernova-4375694976",
+      "description": "",
+      "id": "f5685667acf436f1",
+      "score": 7,
+      "reason": "Technische Führungsposition im Energiesektor mit HVDC-Spezialisierung",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Senior Manager - Project Management",
+      "company": "Cognite",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-manager-project-management-at-cognite-4367468501",
+      "description": "",
+      "id": "3d76cc39122d2a7b",
+      "score": 6,
+      "reason": "Senior Management Position mit Projektfokus, aber ohne konkrete Stellenbeschreibung schwer bewertbar",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Ingenieur:in als Fachspezialist:in Elektrotechnik",
+      "company": "Deutsche Bahn",
+      "location": "Potsdam",
+      "url": "https://de.linkedin.com/jobs/view/ingenieur-in-als-fachspezialist-in-elektrotechnik-at-deutsche-bahn-4359781837",
+      "description": "",
+      "id": "41db9a247035d479",
+      "score": 6,
+      "reason": "Elektrotechnik-Spezialist bei etabliertem Arbeitgeber, aber in Potsdam statt Berlin",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Information Security Consultant (DORA / ISMS)",
+      "company": "Publicis Sapient",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/information-security-consultant-dora-isms-at-publicis-sapient-4356691119",
+      "description": "",
+      "id": "a56bb4ac2063ae54",
+      "score": 6,
+      "reason": "IT-Security Beratung mit Spezialisierung auf DORA/ISMS bei renommierter Beratung",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Projektleiter",
+      "company": "HeyJobs",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/projektleiter-at-heyjobs-4384925660",
+      "description": "",
+      "id": "05b26e8a3e5a4431",
+      "score": 5,
+      "reason": "Allgemeine Projektleiter-Position ohne spezifische Branche oder Anforderungen",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Finance Process Specialist/Assistant Manager/Manager (Bangkok Based, Relocation Provided)",
+      "company": "Agoda",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/finance-process-specialist-assistant-manager-manager-bangkok-based-relocation-provided-at-agoda-4386054281",
+      "description": "",
+      "id": "e1e54b5b29cecedf",
+      "score": 4,
+      "reason": "Finance-Position mit Relocation nach Bangkok, sehr spezifisch und ortsgebunden",
+      "found_date": "2026-04-06"
+    },
+    {
+      "platform": "LinkedIn",
       "title": "Berater für Project & Program Management - Business Transformation (w/m/d)",
       "company": "EY",
       "location": "Berlin",
@@ -1573,6 +1681,6 @@
       "found_date": "2026-03-29"
     }
   ],
-  "last_updated": "2026-04-03 08:50 UTC",
-  "new_today": 22
+  "last_updated": "2026-04-06 09:57 UTC",
+  "new_today": 9
 }
