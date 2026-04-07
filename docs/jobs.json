@@ -2,6 +2,138 @@
   "jobs": [
     {
       "platform": "LinkedIn",
+      "title": "Senior Social Media Project Manager (m/w/d)",
+      "company": "marswalk",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-social-media-project-manager-m-w-d-at-marswalk-4398206607",
+      "description": "",
+      "id": "01d5a4906e57c39e",
+      "score": 7,
+      "reason": "Senior-Position im digitalen Marketing mit Projektverantwortung",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Senior Revenue Accountant",
+      "company": "DeepL",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-revenue-accountant-at-deepl-4385252664",
+      "description": "",
+      "id": "a94258f27c171caf",
+      "score": 7,
+      "reason": "Senior-Position bei etabliertem Tech-Unternehmen im Finanzbereich",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Consultant für Microsoft Fabric, Azure & AI (m/f/d) - busitec",
+      "company": "Jobs via eFinancialCareers",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/consultant-f%C3%BCr-microsoft-fabric-azure-ai-m-f-d-busitec-at-jobs-via-efinancialcareers-4398035251",
+      "description": "",
+      "id": "240fe82152db2305",
+      "score": 6,
+      "reason": "Technische Beratungsrolle mit modernen Technologien, aber ohne Feedback schwer einzuschätzen",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Project Consultant (m/w/d)",
+      "company": "shyftplan",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/project-consultant-m-w-d-at-shyftplan-4398217570",
+      "description": "",
+      "id": "5a72de4278e05f51",
+      "score": 6,
+      "reason": "Beratungsposition mit projektbezogenen Aufgaben, vielseitige Tätigkeit",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Fraud Investigation Specialist",
+      "company": "Almedia",
+      "location": "Berlin, Deutschland",
+      "url": "https://de.linkedin.com/jobs/view/fraud-investigation-specialist-at-almedia-4386337804",
+      "description": "",
+      "id": "be68c42f50bd1310",
+      "score": 6,
+      "reason": "Spezialisierte Rolle in der Betrugserkennung mit analytischem Fokus",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Finance Manager",
+      "company": "Nexfeld",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/finance-manager-at-nexfeld-4398022230",
+      "description": "",
+      "id": "ad3dbdf860239114",
+      "score": 6,
+      "reason": "Management-Position im Finanzwesen mit Führungsverantwortung",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Senior Engineer - Building Automation Data Centre",
+      "company": "Arup",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/senior-engineer-building-automation-data-centre-at-arup-4386371249",
+      "description": "",
+      "id": "2ae92aab5434d946",
+      "score": 6,
+      "reason": "Technische Ingenieursstelle bei renommiertem Beratungsunternehmen",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Akquise Manager Projektsteuerung (m/w/d) - Immobilien",
+      "company": "Empion",
+      "location": "Berlin, Deutschland",
+      "url": "https://de.linkedin.com/jobs/view/akquise-manager-projektsteuerung-m-w-d-immobilien-at-empion-4398364729",
+      "description": "",
+      "id": "ffd400081972f6bf",
+      "score": 5,
+      "reason": "Vertriebsfokus im Immobilienbereich, spezifische Branchenkenntnisse erforderlich",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Strukturierter Vertriebsmanager - Vollzeit (German Speaking)",
+      "company": "Peter Stenmans",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/strukturierter-vertriebsmanager-vollzeit-german-speaking-at-peter-stenmans-4398348819",
+      "description": "",
+      "id": "59f609e17e4424a3",
+      "score": 5,
+      "reason": "Strukturierte Vertriebsrolle, aber wenig Details zur Bewertung verfügbar",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Strukturierter Vertriebsmanager - Vollzeit (German Speaking)",
+      "company": "Felix Rippl",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/strukturierter-vertriebsmanager-vollzeit-german-speaking-at-felix-rippl-4398352826",
+      "description": "",
+      "id": "31ac9db6f6572071",
+      "score": 5,
+      "reason": "Identische Rolle wie Position 6, gleiche Bewertung",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
+      "title": "Mitarbeiter Officemanagement (m/w/d) - Hays",
+      "company": "Jobs via eFinancialCareers",
+      "location": "Berlin",
+      "url": "https://de.linkedin.com/jobs/view/mitarbeiter-officemanagement-m-w-d-hays-at-jobs-via-efinancialcareers-4397779690",
+      "description": "",
+      "id": "1bcb8cb97c2e59db",
+      "score": 4,
+      "reason": "Administrative Rolle mit begrenzten Entwicklungsmöglichkeiten",
+      "found_date": "2026-04-07"
+    },
+    {
+      "platform": "LinkedIn",
       "title": "Projektingenieur:in Konstruktiver Ingenieurbau im Großprojekt S21 Berlin für den 3. Bauabschnit",
       "company": "Deutsche Bahn",
       "location": "Berlin",
@@ -1681,6 +1813,6 @@
       "found_date": "2026-03-29"
     }
   ],
-  "last_updated": "2026-04-06 09:57 UTC",
-  "new_today": 9
+  "last_updated": "2026-04-07 09:54 UTC",
+  "new_today": 11
 }
